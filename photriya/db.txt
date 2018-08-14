@@ -1,0 +1,92 @@
+CREATE DATABASE photriya;
+
+CREATE TABLE image(
+id INT(12) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+selects VARCHAR(100) NOT NULL,
+image VARCHAR(200) NOT NULL
+);
+
+
+
+
+
+
+
+
+<?php
+
+
+if($_POST)
+{
+  print_r($_POST);
+$email = $_POST['email'];
+$mobile = $_POST['mobilenumber'];
+$name = $_POST['username'];
+if($email!='')
+{
+  if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+  {
+    echo "Invalid email";
+  }
+}
+
+INSERT INTO register (email, mobile, password) values($email,$mobile,$password)
+header("Location: folder/login.php");
+
+
+}
+
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+		</div>
+
+		<div class="col-md-4">
+			<h2>Register</h2>
+     <form class="form-group" action="" method="post" enctype="multipart-formdata">
+    <label for="udrnme">UserName:</label>
+    <input type="username" class="form-control" id="username" placeholder="Enter UserName" name="username">
+    <label for="email">Email:</label>
+    <input type="text" class="form-control" id="email" placeholder="email" name="email">
+      <label for="m-nmbr">MobileNumber:</label>
+  <input type="number" class="form-control" id="number" placeholder="Enter mobilenumber" name="mobilenumber">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    <label for="pwd">Repeat Password:</label>
+    <input type="password" class="form-control" id="rpwd" placeholder="Enter Repeatpassword" name="rpswd">
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Registration	</button>
+    <p>
+    	Already a member?<a href="login.html">sign in</a>
+
+    </p>
+  </form>
+		</div>
+		<div class="col-md-4">
+			
+		</div> 
+		</div>
+</div>
+                 
+
+</body>
+</html>

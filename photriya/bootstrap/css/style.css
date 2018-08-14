@@ -1,0 +1,38 @@
+li{
+    list-style-type: none;
+}
+.wrapper {
+    left: 275px;
+    position: absolute;
+    padding-right: 0;
+}
+.side-heading{
+    color: yellow;
+}
+.nav-back{
+    background-color: #203541;
+}
+.list_item{
+    color: white;
+    font-weight: bold;
+}
+.list_item:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+.main-images:hover{
+     cursor: pointer;
+     opacity: .8;
+
+ }
+.nav-items{
+    font-weight: bold;
+}
+.vinay{
+    background-color: #203541;
+}
+
+
+.con-text{
+    background-color: darkslategray;
+}
